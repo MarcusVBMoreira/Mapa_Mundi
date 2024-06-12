@@ -1,3 +1,3 @@
 # Mapa_Mundi
 
-https://github.com/marcusvbmoreira/mapa_mundi/index.html
+https://marcusvbmoreira.github.io/Mapa_Mundi/
