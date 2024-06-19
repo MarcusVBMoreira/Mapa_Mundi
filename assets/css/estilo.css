@@ -39,3 +39,14 @@ svg path {
     width: 90%;
     position: relative;
 }
+
+.msg {
+	height: 2em;
+	
+	&:not(:empty) {
+		padding: .25em .75em;
+		border-radius: 5px;
+		background: #b53;
+		color: #fff
+	}
+}
