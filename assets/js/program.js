@@ -25,7 +25,7 @@ e.addEventListener("mouseover", function () {
     }
     const classes=e.className.baseVal.replace(/ /g, '.')         
     document.querySelectorAll(`.${classes}`).forEach(country =>{
-        country.style.fill = "pink"
+        country.style.fill = "#8DECB4"
     })
     document.getElementById("name").style.opacity = 1
     
