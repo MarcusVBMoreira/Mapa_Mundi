@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +8,16 @@
     <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/estilo.css">
 
+    <script>
+        function showCountryInfo(countryId) {
+            window.location.href = "pais.php?id=" + countryId;
+        }
+    </script>
 </head>
 <body id="body">
-
-    <?xml version="1.0"?>
-
     <div id="name">
         <p id="namep">Name</p>
     </div>
-
     <div class="limitacao">
         <div class="mapa">
             <svg class="allSvg" id="allSvg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round"
@@ -1549,13 +1549,14 @@
                 <circle cx="1798.2" cy="719.3" id="2">
                 </circle>
             </svg>
+
         </div>
     </div>
-    
+
+    <!-- Restante do conteúdo da página -->
+ 
     <p class='msg'></p>
-
 </body>
-
-<script src="assets/js/program.js"></script>    
-
+        <script src="assets/js/program.js"></script>    
 </html>
+
