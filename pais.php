@@ -7,11 +7,12 @@
     <title>Informações do país</title>
     <link rel="stylesheet" href="assets/css/pais.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="button">RETORNAR AO MAPA</a>
-        <div id="slide-container">
+        <div id="slide-container" class="slide-container">
             <div id="slide">
                 <?php
                 $conexao = mysqli_connect("localhost", "root", "", "mapamundi");
@@ -25,8 +26,10 @@
                     while ($registro = mysqli_fetch_assoc($resultado)) {
                         echo "
                             <div class='content'>
-                                <img class='flag' src='assets/img/{$registro['nome']}.png' alt='{$registro['nome']}' srcset=''>
-                                <div class='name'>{$registro['nome']}</div>
+                                <div class='img_bandeira'>
+                                    <img class='flag' src='{$registro['bandeira']}' alt='{$registro['nome']}' srcset=''>
+                                    <div class='name'>{$registro['nome']}</div>
+                                </div>
                             </div>
                             <div class='item' style='background-image: url(assets/img/presidente.png);'>
                                 <div class='infos'>
@@ -64,7 +67,7 @@
                                     <p>{$registro['idh']}</p>
                                 </div>
                             </div>
-                            <div class='item' style='background-image: url(assets/img/populacao.png);'>
+                            <div class='item' style='background-image: url(assets/img/população.png);'>
                                 <div class='infos'>
                                     <p>POPULAÇÃO</p>
                                     <p>{$registro['populacao']}</p>
@@ -85,8 +88,11 @@
             </div>
         </div>
         <div class="buttons">
-            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            <div>
+                <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <a href="index.html">VOLTAR PARA O MAPA</a>
         </div>
     </div>
 
