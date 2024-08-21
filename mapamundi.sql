@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15/08/2024 às 03:08
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Tempo de geração: 21-Ago-2024 às 14:27
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `paises`
+-- Estrutura da tabela `paises`
 --
 
 CREATE TABLE `paises` (
@@ -39,14 +39,14 @@ CREATE TABLE `paises` (
   `moeda` varchar(100) NOT NULL,
   `territorio` varchar(255) NOT NULL,
   `bandeira` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Despejando dados para a tabela `paises`
+-- Extraindo dados da tabela `paises`
 --
 
 INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presidente`, `idioma`, `pib`, `moeda`, `territorio`, `bandeira`) VALUES
-('Afeganistão', 'Pastó/Dari', '41,13 milhões', 'República islâmica', '0,352', 'Mohammad Ashraf Ghani', 'Cabul', '14,27 Bi USD', 'Afegane afegão (AFN)', '652.860 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/125px-Flag_of_the_Taliban.svg.png'),
+('Afeganistão', 'Cabul', '41,13 milhões', 'República islâmica', '0,352', 'Mohammad Ashraf Ghani', 'Pastó/Dari', '14,27 Bi USD', 'Afegane afegão (AFN)', '652.860 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/125px-Flag_of_the_Taliban.svg.png'),
 ('África do Sul', 'Pretória', '57.780.000', 'República Constitucional e parlamentarista', '0.717', 'Cyril Ramaphosa', 'Língua africanêr e inglês', '405,3 bilhões USD', 'Rand sul-africano', '1.221.037km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/125px-Flag_of_South_Africa.svg.png'),
 ('Albânia', 'Tirana', '2,8 milhões', 'Capitalista', '0.795', 'Bajram Begaj', 'Albanês', '$15,28 bilhões', 'Lek albanês (ALL)', '28.748 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/albania.jpg'),
 ('Alemanha', 'Berlim', '83 milhões', 'Capitalista', '0.947', 'Frank-Walter Steinmeier', 'Alemão', '$4,5 trilhões', 'Euro (EUR)', '357.386 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/alemanha.jpg'),
@@ -54,16 +54,16 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Angola', 'Luanda', '30.810.000', 'República presidencialista', '0.591', 'João Lourenço', 'Português', '106,8 bilhões USD', 'Kwanza', '1.246.700km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/188px-Flag_of_Angola.svg.png'),
 ('Anguilla', 'Vale', '15.094', 'Monarquia Parlamentarista, Território Dependente', '0.865', 'Carlos III', 'Inglês', '32 milhões USD', 'Dólar do Caribe Oriental', '91 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Anguilla.svg/125px-Flag_of_Anguilla.svg.png'),
 ('Antígua e Barbuda', 'Saint John', '93.763', 'Parlamentarismo, Monarquia Constitucional Federal', '0.798', 'Rei Charles', 'Inglês', '1,868 bilhão USD', 'Dólar do Caribe Oriental', '440 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/125px-Flag_of_Antigua_and_Barbuda.svg.png'),
-('Arábia Saudita', 'Árabe', '36,41 milhões', 'monarquia absoluta islâmica', '0,752', 'Salman', 'Riad', '1,109 Tri USD', 'Riyal Saudita (SAR)', '2.150.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/125px-Flag_of_Saudi_Arabia.svg.png'),
+('Arábia Saudita', 'Salman', '36,41 milhões', 'monarquia absoluta islâmica', '0,752', 'Árabe', 'Riad', '1,109 Tri USD', 'Riyal Saudita (SAR)', '2.150.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/125px-Flag_of_Saudi_Arabia.svg.png'),
 ('Argélia', 'Argel', '45.000.000', 'República semipresidencialista', '0.745', 'Abdelmadjid Tebboune', 'Árabe, Berbere e Francês', '165 bilhões USD', 'Dinar argelino', '2.381.741 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/188px-Flag_of_Algeria.svg.png'),
 ('Argentina', 'Buenos Aires', '46.23 milhões', 'República federal presidencialista', '0.849', 'Javier Milei', 'Espanhol', '631.1 Bilhões de Dólares', 'Peso argentino', '2.78 milhões km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/188px-Flag_of_Argentina.svg.png'),
-('Armênia', 'Armênio', '2,9 milhões', 'República Semipresidencialista', '0,776', 'Vahagn Khachaturyan', 'Yerevan', '13 Bi USD', 'Dram Armênio (AMD)', '29.743Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/125px-Flag_of_Armenia.svg.png'),
+('Armênia', 'Yerevan', '2,9 milhões', 'República Semipresidencialista', '0,776', 'Vahagn Khachaturyan', 'Armênio', '13 Bi USD', 'Dram Armênio (AMD)', '29.743Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/125px-Flag_of_Armenia.svg.png'),
 ('Austrália', 'Camberra', '27, 195 mi', 'Monarquia constitucional parlamentarista', '0.951', 'Rei Carlos III', 'Inglês', ' 1,61 tri USD', 'Dólar australiano', '7,6 mil km2', 'https://s3.static.brasilescola.uol.com.br/be/2022/01/bandeira-da-australia.jpg'),
 ('Áustria', 'Viena', '8,9 milhões', 'Capitalista', '0.922', 'Alexander Van der Bellen', 'Alemão', '$480,4 bilhões', 'Euro (EUR)', '83.879 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/austria.jpg'),
-('Azerbaijão', 'Azerbaijano', '10 milhões', 'Republica presidencialista', '0,756', 'Ilham Aliyev', 'Baku', '54 Bi USD', 'Dinar bareinita(BHD)', '86.600Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/125px-Flag_of_Azerbaijan.svg.png'),
+('Azerbaijão', 'Baku', '10 milhões', 'Republica presidencialista', '0,756', 'Ilham Aliyev', 'Azerbaijano', '54 Bi USD', 'Dinar bareinita(BHD)', '86.600Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/125px-Flag_of_Azerbaijan.svg.png'),
 ('Bahamas', 'Nassau', '417.456', 'Estado unitário, Parlamentarismo, Monarquia parlamentarista', '0.784', 'Chet Neymour', 'Inglês', '12,9 bilhões USD', 'Dólar bahamense', '13.940 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/800px-Flag_of_the_Bahamas.svg.png'),
-('Bahrain', 'Árabe', '1,5 milhões', 'Monarquia constitucional', '0,852', 'Hamad bin Isa al-Khalifa (rei)', 'Manama', '38 Bi USD', 'Dinar bareinita(BD)', '780Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/125px-Flag_of_Bahrain.svg.png'),
-('Bangladesh', 'Bengali', '166 milhões', 'República parlamentarista', '0,661', 'Mohammed Shahabuddin', 'Daca', '411 Bi USD', 'Taka bengali', '147.570Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/125px-Flag_of_Bangladesh.svg.png'),
+('Bahrain', 'Manama', '1,5 milhões', 'Monarquia constitucional', '0,852', 'Hamad bin Isa al-Khalifa (rei)', 'Árabe', '38 Bi USD', 'Dinar bareinita(BD)', '780Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/125px-Flag_of_Bahrain.svg.png'),
+('Bangladesh', 'Daca', '166 milhões', 'República parlamentarista', '0,661', 'Mohammed Shahabuddin', 'Bengali', '411 Bi USD', 'Taka bengali', '147.570Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/125px-Flag_of_Bangladesh.svg.png'),
 ('Barbados', 'Bridgetown', '281.635', 'República Parlamentarista', '0.788', 'Sandra Mason', 'Inglês', '5,7 bilhões USD', 'Dólar barbadense', '430 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/125px-Flag_of_Barbados.svg.png'),
 ('Bélgica', 'Bruxelas', '11,5 milhões', 'Capitalista', '0.919', 'Alexander De Croo', 'Neerlandês', '$593,9 bilhões', 'Euro (EUR)', '30.689 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/belgica.jpg'),
 ('Belize', 'Belmopã', '405.272 ', 'Democracia Parlamentar', '0.694', 'Charles III', 'Inglês', '2,831 bilhões USD', 'Dólar belizenho', '22.966 km²', 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg'),
@@ -74,26 +74,26 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Bósnia e Herzegovina', 'Saravejo', '3,2 milhões', 'Capitalista', '0.780', 'Željka Cvijanović', 'Bósnio', '$23,1 bilhões', 'Marco conversível da Bósnia (BAM)', '51.197 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/bosniaherzegovina.jpg'),
 ('Botsuana', 'Gaborone', '2.400.000', 'República parlamentarista', '0.708', 'Mokgweetsi Masisi', 'Inglês e Setswana', '18,35 bilhões USD', 'Pula', '581.730 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/255px-Flag_of_Botswana.svg.png'),
 ('Brasil', 'Brasília', '211 milhões ', 'República federativa presidencialista', '0.760', 'Luiz Inácio Lula da Silva', 'Português', '1.92 Trilhão de Dólares ', 'Real', '8.51 milhões km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png'),
-('Brunei', 'Malaio', '450 mil', 'Monarquia Absoluta', '0,838', 'Hassanal Bolkiah (Ditador)', 'Bandar Seri Begawan', '13 Bi USD', 'Dólar Bruneano', '5.765Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/125px-Flag_of_Brunei.svg.png'),
+('Brunei', 'Bandar Seri Begawan', '450 mil', 'Monarquia Absoluta', '0,838', 'Hassanal Bolkiah (Ditador)', 'Malaio', '13 Bi USD', 'Dólar Bruneano', '5.765Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/125px-Flag_of_Brunei.svg.png'),
 ('Bulgária', 'Sofia', '6,9 milhões', 'Capitalista', '0.795', 'Rumen Radev', 'Búlgaro', '$83,9 bilhões', 'Lev búlgaro (BGN)', '110.994 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/bulgaria.jpg'),
 ('Burkina Faso', 'Uagadugu', '22.000.000', 'República semipresidencialista', '0.449', 'Ibrahim Traoré', 'Francês e Mooré', '19,74 bilhões USD', 'Franco CFA Ocidental', '272.967 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/255px-Flag_of_Burkina_Faso.svg.png'),
 ('Burundi', 'Gitega', '13.000.000', 'República presidencialista', '0.426', 'Évariste Ndayishimiye', 'Kirundi, Francês e Inglês', '3,17 bilhões USD', 'Franco Burundiano', '27.834 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/800px-Flag_of_Burundi.svg.png'),
-('Butão', 'Dzongkha', '770 mil', 'Monarquia constitucional', '0,654', 'Jigme Khesar Namgyal', 'Timbu', '2,5 Bi USD', 'Ngultrum(BTN)', '38.394Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/125px-Flag_of_Bhutan.svg.png'),
+('Butão', 'Timbu', '770 mil', 'Monarquia constitucional', '0,654', 'Jigme Khesar Namgyal', 'Dzongkha', '2,5 Bi USD', 'Ngultrum(BTN)', '38.394Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/125px-Flag_of_Bhutan.svg.png'),
 ('Cabo Verde', 'Praia', '593.149', 'República semipresidencialista unitária', '0.661', 'José Maria Neves', 'Português', '2,227 bilhões USD', 'Escudo cabo-verdiano', '4.033 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/255px-Flag_of_Cape_Verde.svg.png'),
 ('Camarões', 'Yaoundé', '27.910.000', 'República Presidencialista', '0.587', 'Paul Biya', 'Francês e Inglês', '43,64 bilhões USD', 'Franco CFA Central', '475.442 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/255px-Flag_of_Cameroon.svg.png'),
-('Cambodja', 'Khmer', '16 milhões', 'Monarquia constitucional', '0,594', 'Hun Sen', 'Phnom Penh', '27 Bi USD', 'Riel', '181.035Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/125px-Flag_of_Cambodia.svg.png'),
+('Cambodja', 'Phnom Penh', '16 milhões', 'Monarquia constitucional', '0,594', 'Hun Sen', 'Khmer', '27 Bi USD', 'Riel', '181.035Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/125px-Flag_of_Cambodia.svg.png'),
 ('Canadá', 'Ottawa', '38,93 milhões ', 'República Federal Presidencialista', '0.888', 'Justin Trudeau', 'Francês, Inglês', '2,138 trilhões USD', 'dólar canadense', '9.985.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/125px-Flag_of_Canada_%28Pantone%29.svg.png'),
-('Catar', 'Árabe', '2,9 milhões', 'Monarquia Absoluta', '0,848', 'Tamim bin Hamad al-Thani', 'Doha', '192 Bi USD', 'Rial Catariano', '11.586Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png'),
-('Cazaquistão', 'Cazaque/Russo', '19 milhões', 'república presidencialista', '0,825', 'Kassym-Jomart Tokayev', 'Nursultan', '182 Bi USD', 'Tenge cazaque', '2.724.900Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/125px-Flag_of_Kazakhstan.svg.png'),
+('Catar', 'Doha', '2,9 milhões', 'Monarquia Absoluta', '0,848', 'Tamim bin Hamad al-Thani', 'Árabe', '192 Bi USD', 'Rial Catariano', '11.586Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/125px-Flag_of_Qatar.svg.png'),
+('Cazaquistão', 'Nursultan', '19 milhões', 'república presidencialista', '0,825', 'Kassym-Jomart Tokayev', 'Cazaque/Russo', '182 Bi USD', 'Tenge cazaque', '2.724.900Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/125px-Flag_of_Kazakhstan.svg.png'),
 ('Chade', 'Djamena', '17.500.000', 'República unitária sob regime militar', '0.295', 'Mahamat Déby Itno', 'Francês e Árabe', '12,7 bilhões USD', 'Franco CFA Central', '1.284.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg'),
 ('Chile', 'Santiago', '19.6 milhão', 'República unitária presidencialista', '0.855', 'Gabriel Boric', 'Espanhol', '301 Bilhão de Dólares', 'Peso chileno', '756,626 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/188px-Flag_of_Chile.svg.png'),
-('China', 'Mandarim', '1,4 bilhões', 'Estado socialista unipartidário', '0,768', 'Xi Jinping', 'Pequim', '17,7 Tri USD', 'Yuan(CNY)', '9.596.961 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/125px-Flag_of_the_People%27s_Republic_of_China.svg.png'),
+('China', 'Pequim', '1,4 bilhões', 'Estado socialista unipartidário', '0,768', 'Xi Jinping', 'Mandarim', '17,7 Tri USD', 'Yuan(CNY)', '9.596.961 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/125px-Flag_of_the_People%27s_Republic_of_China.svg.png'),
 ('Chipre', 'Nicósia', '1,19 milhão', 'Capitalista', '0.856', 'Nicos Anastasiades', 'Grego', 'US$ 21,88 bilhões', 'Euro (EUR)', '9.251 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/chipre.jpg'),
 ('Colômbia', 'Bogotá', '51.87 milhões', 'República presidencialista unitária', '0.767', 'Gustavo Petro', 'Espanhol', '343.6 Bilhão de Dólares', 'Peso colombiano', '1.142 milhões km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/188px-Flag_of_Colombia.svg.png'),
 ('Comores', 'Moroni', '836.774', 'República federal Presidencialista', '0.586', 'Azali Assoumani', 'Comoriano, Árabe e Francês', '1,243 bilhão USD', 'Franco comoriano', '2.235 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/800px-Flag_of_the_Comoros.svg.png'),
 ('Congo', 'Brazzaville', '5.970.000', 'República Semipresidencialista Unitária', '0.593', 'Denis Sassou Nguesso', 'Francês', '15,82 bilhões USD', 'Franco CFA Central', '342.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/125px-Flag_of_the_Republic_of_the_Congo.svg.png'),
-('Coreia do norte', 'Coreano', '25 milhões', 'Estado socialista unipartidário', '0,595', 'Kim Jong-un', 'Pyongyang', '40 Bi USD', 'Won', '120.540Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/125px-Flag_of_North_Korea.svg.png'),
-('Coreia do sul', 'Coreano', '51 milhões', 'Republica presidencialista', '0,929', 'Yoon Suk-yeol', 'Seul', '1,8 Tri USD', 'Won', '100.210 Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/125px-Flag_of_South_Korea.svg.png'),
+('Coreia do norte', 'Pyongyang', '25 milhões', 'Estado socialista unipartidário', '0,595', 'Kim Jong-un', 'Coreano', '40 Bi USD', 'Won', '120.540Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/125px-Flag_of_North_Korea.svg.png'),
+('Coreia do sul', 'Seul', '51 milhões', 'Republica presidencialista', '0,929', 'Yoon Suk-yeol', 'Coreano', '1,8 Tri USD', 'Won', '100.210 Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/125px-Flag_of_South_Korea.svg.png'),
 ('Costa do Marfim', 'Yamussucro', '28.160.000', 'República presidencial multipartidária', '0.534', 'Alassane Ouattara', 'Francês', '70,02 bilhões USD', 'Franco CFA ocidental', '322.462 km²', 'https://abrasoffa.org.br/wp-content/uploads/2022/02/Costa-do-Marfim.png'),
 ('Costa Rica', 'San José', '5,181 milhões', 'Presidencialista unitário', '0.809', 'Rodrigo Chaves', 'Espanhol', '69,24 bilhões USD', 'Colón costarriquenho', '51.100 km²', 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg'),
 ('Croácia', 'Zagreb', '4,15 milhão', 'Capitalista', '0.838', 'Zoran Milanović', 'Croata', 'US$ 66,08 bilhões', 'Kuna Croata', '56.594 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/croacia.jpg'),
@@ -103,7 +103,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Dominica', 'Roseau', '72.737', 'República Parlamentarista', '0.776', 'Luis Abinader', 'Inglês', '607,4 milhões USD', 'Dólar do Caribe Oriental', '754 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/1200px-Flag_of_Dominica.svg.png'),
 ('Egito', 'Cairo', '111.000.000', 'República Democrática', '0.728', 'Abdul Fatah Khalil Al-Sisi', 'Árabe', '476,7 bilhões USD', 'Libra egípcia', '1.002.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/255px-Flag_of_Egypt.svg.png'),
 ('El Salvador', 'São Salvador', '6,336 milhões', 'Presidencialismo, República constitucional', '0.659', 'Nayib Bukele', 'Espanhol', '32,49 bilhões USD', 'Dólar americano, Bitcoin', '21.040 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/800px-Flag_of_El_Salvador.svg.png'),
-('Emirados Árabes Unidos', 'Árabe', '9,8 milhões', 'Monarquia Federal', '0,89', 'Mohammed bin Zayed Al Nahyan', 'Abu Dhabi', '501 Bi USD', 'Dirham dos Emirados Árabes Unidos', '83.600Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/125px-Flag_of_the_United_Arab_Emirates.svg.png'),
+('Emirados Árabes Unidos', 'Abu Dhabi', '9,8 milhões', 'Monarquia Federal', '0,89', 'Mohammed bin Zayed Al Nahyan', 'Árabe', '501 Bi USD', 'Dirham dos Emirados Árabes Unidos', '83.600Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/125px-Flag_of_the_United_Arab_Emirates.svg.png'),
 ('Equador', 'Quito', '18 milhões', 'República presidencialista', '0.740', 'Daniel Noboa', 'Espanhol', '115 Bilhões de Dólares', 'Dólar americano', '283.561 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/188px-Flag_of_Ecuador.svg.png'),
 ('Eritreia', 'Asmara', '3.684.000', 'República presidencialista unipartidária unitária', '0.493', 'Isaias Afewerki', 'Árabe, Tigrínio e Inglês', '2,065 bilhões USD', 'Nakfa', '117.600 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/255px-Flag_of_Eritrea.svg.png'),
 ('Escócia', 'Edimburgo', '5,5 milhões', 'Capitalista', '0.932', 'Rishi Sunak', 'Escocês gaélico', '$205 bilhões', 'Libra esterlina (GBP)', '77.910 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/escocia.jpg'),
@@ -116,7 +116,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Estônia', 'Tallinn', '1,33 milhão', 'Capitalista', '0.867', 'Kaja Kallas', 'Estoniano', 'US$ 31,82 bilhões', 'Euro (EUR)', '43.297 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/estonia.jpg'),
 ('Etiópia', 'Addis Ababa', '123.400.000', 'República federal parlamentarista', '0.492', 'Sahle-Work Zewde', 'Amárico', '126,8 bilhões USD', 'Birr', '1.112.000 km²', 'https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg'),
 ('Fiji', 'Suva', '926,2 mil', 'República parlamentarista', '0.73', 'Wiliame Katonivere', 'Inglês, fijiano e híndi fijiano', ' 3 bi USD ', 'Dólar Fijiano', '18,3 mil km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/125px-Flag_of_Fiji.svg.png'),
-('Filipinas', 'Filipino/Inglês', '113 milhões', 'república presidencialista', '0,718', 'Bongbong Marcos', 'Manila', '402 Bi USD', 'Peso filipino (PHP)', '300.000Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/125px-Flag_of_the_Philippines.svg.png'),
+('Filipinas', 'Manila', '113 milhões', 'república presidencialista', '0,718', 'Bongbong Marcos', '', '402 Bi USD', 'Peso filipino (PHP)', '300.000Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/125px-Flag_of_the_Philippines.svg.png'),
 ('Finlândia', 'Helsinki', '5,52 milhão', 'Capitalista', '0.890', 'Sanna Marin', 'Finlandês', 'US$ 331,6 bilhões', 'Euro (EUR)', '338.424 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/finlandia.jpg'),
 ('França', 'Paris', '65,72 milhão', 'Capitalista', '0.901', 'Emmanuel Macron', 'Francês', 'US$ 2.922 trilhões', 'Euro (EUR)', '551.695 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/franca.jpg'),
 ('Gabão', 'Libreville', '2.389.000', 'República presidencialista', '0.693', 'Brice Oligui Nguema', 'Francês', '21,07 bilhões USD', 'Franco CFA Central', '267.667 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/1200px-Flag_of_Gabon.svg.png'),
@@ -160,9 +160,9 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Itália', 'Roma', '59 milhões', 'Capitalista', '0.895', 'Sergio Mattarella', 'Italiano', '$2,2 trilhões', 'Euro (EUR)', '301.340 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/italia.jpg'),
 ('Jamaica', 'Kingston', '2,827 milhões', 'democracia parlamentar e monarquia constitucional', '0.688', 'Patrick Allen', 'Inglês', '17,1 bilhões USD', 'Dólar jamaicano', '10.991 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/125px-Flag_of_Jamaica.svg.png'),
 ('Japão', 'Japonês', '126 milhões', 'Monarquia constitucional', '0,919', 'Naruhito', 'Tóquio', '5 Tri USD', 'Iene (JP¥)', '377.975Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/125px-Flag_of_Japan.svg.png'),
-('Jordânia', 'Árabe', '10 milhões', 'Monarquia constitucional', '0,741', 'Abdullah II da Jordânia', 'Amã', '46 Bi USD', 'Dinar Jordaniano (JOD)', '89.342Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/125px-Flag_of_Jordan.svg.png'),
+('Jordânia', 'Amã', '10 milhões', 'Monarquia constitucional', '0,741', 'Abdullah II da Jordânia', 'Árabe', '46 Bi USD', 'Dinar Jordaniano (JOD)', '89.342Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/125px-Flag_of_Jordan.svg.png'),
 ('Kiribati', 'Baikiti', '119,4 mil', 'República presidencialista', '0.624', 'Taneti Maamau', 'Inglês e gilbernês', ' 130 mi USD ', 'Dólar de Kiribati e Dólar Australiano', '726 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/1200px-Flag_of_Kiribati.svg.png'),
-('Kuwait', 'Árabe', '4,3 milhões', 'Monarquia constitucional', '0,816', 'Mishal Al-Ahmad Al-Jaber Al-Sabah', 'Kuwait', '132 Bi USD', 'Dinar kuwaitiano (KD)', '17.818Km²', 'https://tse1.mm.bing.net/th?id=OIP.ktD7wm-W7zL9_MeluCa2nAHaDt&pid=Api&P=0&h=180'),
+('Kuwait', 'Kuwait', '4,3 milhões', 'Monarquia constitucional', '0,816', 'Mishal Al-Ahmad Al-Jaber Al-Sabah', 'Árabe', '132 Bi USD', 'Dinar kuwaitiano (KD)', '17.818Km²', 'https://tse1.mm.bing.net/th?id=OIP.ktD7wm-W7zL9_MeluCa2nAHaDt&pid=Api&P=0&h=180'),
 ('Laos', 'Lao', '7,2 milhões', 'República socialista de partido único', '0,613', 'Thongloun Sisoulith', 'Vivenciana', '19 Bi USD', 'Kip laosiano (LAK)', '236.800Km²', 'https://tse1.mm.bing.net/th?id=OIP.T6-IOBXz6AB03l-6611lsgHaE8&pid=Api&P=0&h=180'),
 ('Lesoto', 'Maseru', '2.175.000', 'Monarquia constitucional parlamentarista', '0.527', 'Sam Matekane', 'Sesoto e Inglês', '2,947 bilhões USD', 'Loti', '30.355 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/255px-Flag_of_Lesotho.svg.png'),
 ('Letônia', 'Riga', '1,8 milhões', 'Capitalista', '0.866', 'Edgars Rinkēvičs', 'Letão', '$44 bilhões', 'Euro (EUR)', '64.589 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/letonia.jpg'),
@@ -199,7 +199,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Nigéria', 'Abuja', '213.400.000', 'República presidencialista', '0.535', 'Bola Tinubu', 'Inglês', '514,1 bilhões USD', 'Naira', '923.769 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/255px-Flag_of_Nigeria.svg.png'),
 ('Noruega', 'Oslo', '5,432,580', 'Capitalista', '0.953', 'Harald V', 'Norueguês', '$398.854 bilhões', 'Coroa norueguesa (NOK)', '385,207 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/noruega.jpg'),
 ('Nova Zelândia', 'Wellington', '5,3 mi', 'Monarquia constitucional parlamentarista', '0.937', 'Rei Carlos III', 'Inglês, Maori', ' 279,2 bi USD ', 'Dólar da Nova Zelândia', '268 mil km²', 'https://img.freepik.com/vetores-gratis/ilustracao-da-bandeira-da-nova-zelandia_53876-27119.jpg?t=st=1723642255~exp=1723645855~hmac=4368722d4744b0af289aa9de0f99b1b7cb7d8de19cf920805bd67e923dda335a&w=1060'),
-('Omã', 'Árabes', '4,576 milhões', 'Monarquia Absolutista', '0,813', 'Haitham bin Tariq Al Said', 'Mascate', '114,7 Bi USD', 'Rial omanense (OMR)', '309.501 km²', 'https://cidadeolimpica.com.br/wp-content/uploads/2022/01/bandeira-oma.png'),
+('Omã', 'Mascate', '4,576 milhões', 'Monarquia Absolutista', '0,813', 'Haitham bin Tariq Al Said', 'Árabe', '114,7 Bi USD', 'Rial omanense (OMR)', '309.501 km²', 'https://cidadeolimpica.com.br/wp-content/uploads/2022/01/bandeira-oma.png'),
 ('País de Gales', 'Cadiff', '3,1 milhões', 'Capitalista', '0.932', 'Rishi Sunak', 'Galês', '$90 bilhões', 'Libra esterlina (GBP)', '20.761 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/paisdegales.jpg'),
 ('Países Baixos', 'Amsterdã', '17,5 milhões', 'Capitalista', '0.944', 'Rei Willem-Alexander', 'Holandês', 'US$ 1,0 trilhão', 'Euro (EUR)', '41.543 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/holanda.jpg'),
 ('Palau', 'Melekeok', '20,8 mil', 'República presidencialista', '0.797', 'Surangel Whipps Jr.', 'Inglês, palauano, japonês, tobiado e sonsorolês', ' 182 mi USD', 'Dólar americano', '458 km²', 'https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Palau.svg'),
@@ -220,7 +220,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('República Dominicana', 'Santo Domingo', '11,23 milhões', 'Presidencialista unitário', '0.767', 'Luis Abinader', 'Espanhol', '113,5 bilhões', 'Peso dominicano', '48.442 km²', 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg'),
 ('Romênia', 'Bucareste', '19 milhões', 'Capitalista', '0.821', 'Klaus Iohannis', 'Romeno', '$284 bilhões', 'Leu romeno (RON)', '238.397 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/romenia.jpg'),
 ('Ruanda', 'Quigali', '13.260.000', 'República presidencialista', '0.543', 'Paul Kagame', 'Kinyarwanda, Francês e Inglês', '11,07 bilhões USD', 'Franco ruandês', '26.338 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/255px-Flag_of_Rwanda.svg.png'),
-('Rússia', 'Russo', '143 milhões', 'república federal semipresidencialista', '0,824', 'Vladimir Putin', 'Moscou', '1,7 Tri USD', 'Rublo russo (RUB)', '17.098.242Km²', 'https://tse2.mm.bing.net/th?id=OIP.uW9Hi1USsULyX2e4Y7iy-gAAAA&pid=Api&P=0&h=180'),
+('Rússia', 'Moscou', '143 milhões', 'república federal semipresidencialista', '0,824', 'Vladimir Putin', 'Russo', '1,7 Tri USD', 'Rublo russo (RUB)', '17.098.242Km²', 'https://tse2.mm.bing.net/th?id=OIP.uW9Hi1USsULyX2e4Y7iy-gAAAA&pid=Api&P=0&h=180'),
 ('Saara Ocidental', 'El Aiune', '567.402', 'República nominal', '0,500', 'Brahim Ghali', 'Árabe e espanhol', '900 milhões USD', 'dirrã marroquino peseta saaraui', '266.719 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg/188px-Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg.png'),
 ('Samoa', 'Ápia', '176,2 mil', 'República parlamentarista', '0.707', 'Va\'aletoa Sualauvi II', 'Inglês e samoano', ' 523 mi USD ', 'Tala', '2 mil km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/1200px-Flag_of_Samoa.svg.png'),
 ('Samoa Americana', 'Pago Pago', '46.366', 'Território não incorporado', '0,707', 'Lemanu Peleti Mauga', 'Samoano e inglês', '575,3 milhões USD', 'Dólar americano', '199 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Flag_of_American_Samoa.svg/188px-Flag_of_American_Samoa.svg.png'),
@@ -236,7 +236,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 ('Sérvia', 'Belgrado', '6,7 milhões', 'Capitalista', '0.806', 'Aleksandar Vučić', 'Sérvio', '$65 bilhões', 'Dinar sérvio (RSD)', '88.361 km²', 'https://www.sogeografia.com.br/figuras/bandeiras/europa/servia.jpg'),
 ('Singapura', 'Inglês/Malaio', '5,7 milhões', 'República parlamentarista', '0,939', 'Tharman Shanmugaratnam', 'Cingapura', '396 Bi USD', 'SGD', '728Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/125px-Flag_of_Singapore.svg.png'),
 ('Sint Maarten', 'Phillipsburg', '42.848', 'Monarquia Parlamentarista, Estado Unitário, Democracia Representativa', 'não classificado', 'Guilherme Alexandre', 'Neerlandês, Inglês', '1,537 bilhão USD', 'Florim das Antilhas Holandesa', '34 km²', 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Sint_Maarten.svg'),
-('Síria', 'Árabe', '17,5 milhões', 'Republica presidencialista autoritária', '0,549', 'Bashar al-Assad', 'Damasco', '21 Bi USD', 'Libra síria (SYP)', '185.180Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/125px-Flag_of_Syria.svg.png'),
+('Síria', 'Damasco', '17,5 milhões', 'Republica presidencialista autoritária', '0,549', 'Bashar al-Assad', 'Árabe', '21 Bi USD', 'Libra síria (SYP)', '185.180Km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/125px-Flag_of_Syria.svg.png'),
 ('Somália', 'Mogadíscio', '17.470.000', 'República parlamentarista federal', '0.383', 'Hassan Sheikh Mohamud', 'Somali', '7,209 bilhões USD', 'Xelim somali', '637.657 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/255px-Flag_of_Somalia.svg.png'),
 ('Sri Lanka', 'Cingalês/Tâmil', '21 milhões', 'Republica presidencialista', '0,782', 'Ranil Wickremesinghe', 'Kotte', '84 Mi USD', 'Rupia cingalesa (LKR)', '65.610Km²', 'https://wallpaperaccess.com/full/2714480.jpg'),
 ('Suazilândia', 'Mbabane', '1.093.000', 'Monarquia absoluta', '0.608', 'Mswati III', 'Inglês e Suázi', '4,714 bilhões USD', 'Lilangeni', '17.364 km²', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/255px-Flag_of_Eswatini.svg.png'),
@@ -272,7 +272,7 @@ INSERT INTO `paises` (`nome`, `capital`, `populacao`, `politica`, `idh`, `presid
 --
 
 --
--- Índices de tabela `paises`
+-- Índices para tabela `paises`
 --
 ALTER TABLE `paises`
   ADD PRIMARY KEY (`nome`);
